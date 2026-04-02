@@ -1,0 +1,56 @@
+body {
+    background-color: #0B0B0F;
+    color: #F5F5F5;
+    overflow-x: hidden;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #7A5CFF 0%, #00D4FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(122, 92, 255, 0.4);
+}
+
+/* Subtly animated background blob */
+.bg-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(122,92,255,0.15) 0%, rgba(11,11,15,0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: float 10s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 30px) scale(1.1); }
+}
+
+.zibeline-eyes {
+    width: 6px;
+    height: 6px;
+    background-color: #00D4FF;
+    box-shadow: 0 0 10px #00D4FF, 0 0 20px #7A5CFF;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+    0%, 96%, 100% { transform: scaleY(1); }
+    98% { transform: scaleY(0.1); }
+}

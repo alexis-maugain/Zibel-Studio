@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zibel Studio | Redéfinir le réel, vivre l'impossible</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for quick preview) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="antialiased selection:bg-neonPurple selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-panel border-none rounded-none border-b border-white/10 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <span class="text-white">ZIBEL</span><span class="text-neonPurple">.</span><span class="text-sm font-normal text-gray-400 ml-1">STUDIO</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-white transition-colors">La Vision</a>
+                <a href="#services" class="hover:text-white transition-colors">Expertises</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Expériences</a>
+                <a href="#process" class="hover:text-white transition-colors">Méthodologie</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all hover-glow text-sm font-semibold">
+                Passer en 4ème dimension
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background placeholder (normally a VR video) -->
+        <div class="absolute inset-0 bg-deepBlack z-[-2]">
+            <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-20 transform scale-105" alt="VR Background">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-deepBlack/50 to-deepBlack z-[-1]"></div>
+        
+        <div class="bg-blob top-1/4 left-1/4"></div>
+        <div class="bg-blob bottom-1/4 right-1/4" style="background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, rgba(11,11,15,0) 70%);"></div>
+
+        <div class="text-center z-10 max-w-4xl px-4 gs-hero">
+            <!-- Subtle Mascot Intro -->
+            <div class="flex items-center justify-center space-x-2 mb-6 opacity-80">
+                <div class="flex">
+                    <span class="zibeline-eyes"></span>
+                    <span class="zibeline-eyes"></span>
+                </div>
+                <span class="text-sm text-elecBlue font-medium tracking-widest uppercase">Suivez la Zibeline</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight">
+                Redéfinir le réel, <br>
+                <span class="text-gradient">vivre l'impossible.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">
+                Zibel Studio crée des expériences immersives haut de gamme où la technologie s'efface pour laisser place à l'émerveillement.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#portfolio" class="px-8 py-4 rounded-full bg-neonPurple text-white font-semibold hover-glow transition-all w-full sm:w-auto text-center">
+                    Découvrir nos expériences
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-full glass-panel hover:bg-white/10 transition-all w-full sm:w-auto text-center font-semibold">
+                    Demander une démo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="gs-fade">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8">Nous sommes les <span class="text-neonPurple">Zibelins.</span></h2>
+                <div class="space-y-6 text-gray-400 text-lg font-light leading-relaxed">
+                    <p>
+                        Chez Zibel Studio, nous concevons des ponts entre le tangible et le virtuel. Guidés par notre mascotte, la Zibeline — symbole d'agilité, d'élégance et d'intelligence —, nos Zibelins sont des artisans du futur.
+                    </p>
+                    <p>
+                        Chaque Zibelin est un expert passionné, un explorateur dévoué à repousser les limites de la perception. Nous croyons que la réalité virtuelle ne doit pas être un gadget isolé, mais une extension accessible, divertissante, et profondément humaine de notre réalité.
+                    </p>
+                </div>
+                <div class="mt-12 grid grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-elecBlue mb-2">01</div>
+                        <div class="text-sm uppercase tracking-wide">Accessibilité</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-elecBlue mb-2">02</div>
+                        <div class="text-sm uppercase tracking-wide">Innovation</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-elecBlue mb-2">03</div>
+                        <div class="text-sm uppercase tracking-wide">Émotion</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[500px] glass-panel rounded-2xl overflow-hidden gs-fade">
+                <div class="absolute inset-0 bg-gradient-to-tr from-neonPurple/20 to-elecBlue/20"></div>
+                <!-- Abstract 3D interpretation placeholder -->
+                <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&q=80&w=800" alt="Zibelins at work" class="w-full h-full object-cover mix-blend-overlay opacity-50">
+                <div class="absolute bottom-6 left-6 flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
+                        <div class="flex">
+                            <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                            <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                        </div>
+                    </div>
+                    <span class="text-sm font-medium">Les Zibelins à l'œuvre.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-[#08080A] relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 gs-fade">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">L'expertise <span class="text-gradient">Zibel</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Trois dimensions. Trois domaines d'excellence où nos Zibelins imaginent le futur de votre interaction.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-panel p-8 group hover:-translate-y-2 transition-all duration-300 gs-fade cursor-pointer relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-neonPurple/0 to-neonPurple/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="h-12 w-12 rounded-lg bg-neonPurple/20 flex items-center justify-center mb-8 border border-neonPurple/30">
+                        <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">L'Événementiel VR</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Concerts, salons, activations de marque. Marquez les esprits avec des événements live interactifs hors du commun.</p>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-neonPurple">Énergie Dynamique</span>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-panel p-8 group hover:-translate-y-2 transition-all duration-300 gs-fade cursor-pointer relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-elecBlue/0 to-elecBlue/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="h-12 w-12 rounded-lg bg-elecBlue/20 flex items-center justify-center mb-8 border border-elecBlue/30">
+                        <svg class="w-6 h-6 text-elecBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Formation Pro</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Simulations métiers haute fidélité. Accélérez l'apprentissage technique et la sécurité via la pratique immersive.</p>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-elecBlue">Technicité Absolue</span>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-panel p-8 group hover:-translate-y-2 transition-all duration-300 gs-fade cursor-pointer relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="h-12 w-12 rounded-lg bg-white/10 flex items-center justify-center mb-8 border border-white/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tourisme 360°</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Valorisation de patrimoine et visites virtuelles. Laissez la Zibeline exploratrice guider vos utilisateurs sans frontières.</p>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-white">Exploration Spatiale</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16 gs-fade">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Expériences récentes</h2>
+                    <p class="text-gray-400">Entrez dans notre univers.</p>
+                </div>
+                <a href="#" class="hidden md:flex items-center space-x-2 text-sm text-neonPurple hover:text-white transition-colors">
+                    <span>Voir tout le portfolio</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade">
+                    <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <div class="text-elecBlue text-xs font-bold uppercase tracking-wider mb-2">Simulation Auto</div>
+                        <h3 class="text-2xl font-bold mb-2">Tesla Model Z - Virtual Drive</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Expérience de conduite en showroom générée sous Unreal Engine 5.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade">
+                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <div class="text-neonPurple text-xs font-bold uppercase tracking-wider mb-2">Événement & Art</div>
+                        <h3 class="text-2xl font-bold mb-2">Louvre 2050 - Visite Immersive</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Redécouverte des œuvres classiques en environnements dystopiques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-32 bg-[#08080A] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-20 text-center gs-fade">Le protocole de création</h2>
+
+            <!-- Timeline -->
+            <div class="relative border-l border-white/10 md:border-none ml-4 md:ml-0">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-white/10 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid md:grid-cols-4 gap-12 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="relative pl-8 md:pl-0 pt-0 md:pt-12 gs-step">
+                        <div class="absolute top-0 left-[-5px] md:left-1/2 md:-ml-1.5 md:top-[-6px] w-3 h-3 bg-neonPurple rounded-full shadow-[0_0_10px_#7A5CFF] z-20"></div>
+                        <h4 class="text-xl font-bold mb-2 text-white">1. Vision</h4>
+                        <p class="text-sm text-gray-400">Analyse des besoins et identification des piliers immersifs du projet.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative pl-8 md:pl-0 pt-0 md:pt-12 gs-step">
+                        <div class="absolute top-0 left-[-5px] md:left-1/2 md:-ml-1.5 md:top-[-6px] w-3 h-3 bg-white/20 rounded-full z-20 transition-colors"></div>
+                        <h4 class="text-xl font-bold mb-2 text-white">2. Dimension</h4>
+                        <p class="text-sm text-gray-400">Storyboarding, design UI/UX spatial et modélisation de l'environnement.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative pl-8 md:pl-0 pt-0 md:pt-12 gs-step">
+                        <div class="absolute top-0 left-[-5px] md:left-1/2 md:-ml-1.5 md:top-[-6px] w-3 h-3 bg-white/20 rounded-full z-20 transition-colors"></div>
+                        <h4 class="text-xl font-bold mb-2 text-white">3. Matérialisation</h4>
+                        <p class="text-sm text-gray-400">Développement VR sous moteurs temps réel, optimisation et tests intensifs.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative pl-8 md:pl-0 pt-0 md:pt-12 gs-step">
+                        <div class="absolute top-0 left-[-5px] md:left-1/2 md:-ml-1.5 md:top-[-6px] w-3 h-3 bg-elecBlue rounded-full shadow-[0_0_10px_#00D4FF] z-20"></div>
+                        <h4 class="text-xl font-bold mb-2 text-white">4. Déploiement</h4>
+                        <p class="text-sm text-gray-400">Livraison sur parc matériel, formation et lancement au public.</p>
+                    </div>
+                </div>
+                
+                <!-- Mascot guide -->
+                <div class="hidden md:flex absolute top-1/2 left-0 -translate-y-1/2 z-30 items-center justify-center gs-mascot-guide" style="width: 20px;">
+                    <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                    <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-40 relative overflow-hidden flex items-center justify-center">
+        <!-- Intense Background Blur effect for CTA -->
+        <div class="absolute inset-0 bg-gradient-to-t from-neonPurple/20 via-deepBlack to-deepBlack z-[-2]"></div>
+        <div class="bg-blob top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neonPurple/20" style="filter: blur(100px);"></div>
+        
+        <div class="text-center z-10 gs-fade relative">
+            <h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">Passez à la dimension supérieure.</h2>
+            <p class="text-xl text-gray-400 mb-12 font-light">Les Zibelins n'attendent plus que vos idées.</p>
+            <button class="px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+                Contactez-nous
+            </button>
+
+            <!-- Final Mascot appearance -->
+            <div class="absolute -right-20 -bottom-20 opacity-50 hidden md:block select-none pointer-events-none">
+                 <div class="flex flex-col items-center">
+                     <div class="flex mb-2">
+                        <span class="zibeline-eyes w-2 h-2 mx-1 shadow-[0_0_15px_#00D4FF]"></span>
+                        <span class="zibeline-eyes w-2 h-2 mx-1 shadow-[0_0_15px_#00D4FF]"></span>
+                     </div>
+                     <span class="text-[10px] text-elecBlue uppercase tracking-widest">Fin de la simulation</span>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-deepBlack py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl font-bold mb-6 md:mb-0">
+                <span class="text-white">ZIBEL</span><span class="text-neonPurple">.</span>
+            </div>
+            
+            <div class="flex space-x-6 text-sm text-gray-500 mb-6 md:mb-0">
+                <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                <a href="#" class="hover:text-white transition-colors">Presse</a>
+            </div>
+
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Assistant Chatbot Zibeline -->
+    <div id="zibel-chatbot" class="fixed bottom-6 right-6 z-[100] flex flex-col items-end pointer-events-none">
+        <!-- Chat Window -->
+        <div id="chat-window" class="pointer-events-auto hidden w-80 sm:w-96 glass-panel mb-4 overflow-hidden flex-col shadow-2xl transition-all duration-300 origin-bottom-right transform scale-95 opacity-0">
+            <!-- Header -->
+            <div class="bg-white/5 border-b border-white/10 p-4 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-deepBlack border border-white/10 flex items-center justify-center">
+                        <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                        <span class="zibeline-eyes w-1.5 h-1.5 mx-0.5"></span>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">La Zibeline</h4>
+                        <p class="text-[10px] text-elecBlue">Assistant Immersif (IA)</p>
+                    </div>
+                </div>
+                <button id="close-chat" class="text-gray-400 hover:text-white transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Messages -->
+            <div id="chat-messages" class="p-4 h-64 overflow-y-auto space-y-4 flex flex-col text-sm scroll-smooth bg-deepBlack/80">
+                <div class="self-start max-w-[85%]">
+                    <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-sm border border-white/5">
+                        Bonjour ! Je suis la Zibeline, l'intelligence du Studio 🐾. Comment puis-je vous guider dans nos mondes virtuels ?
+                    </div>
+                </div>
+            </div>
+            <!-- Input -->
+            <div class="p-3 border-t border-white/10 bg-black/60">
+                <form id="chat-form" class="relative flex items-center">
+                    <input type="text" id="chat-input" placeholder="Posez votre question..." autocomplete="off" class="w-full bg-white/5 border border-white/10 text-white text-sm rounded-full pl-4 pr-10 py-2.5 focus:outline-none focus:border-neonPurple transition-colors placeholder-gray-500">
+                    <button type="submit" class="absolute right-2 p-1.5 text-elecBlue hover:text-neonPurple transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="pointer-events-auto w-14 h-14 rounded-full glass-panel hover-glow flex items-center justify-center bg-gradient-to-tr from-neonPurple/20 to-elecBlue/20 border border-white/20 shadow-[0_0_20px_rgba(122,92,255,0.3)] transition-transform hover:scale-105">
+            <div class="flex">
+                <span class="zibeline-eyes w-2 h-2 mx-0.5 shadow-[0_0_15px_#00D4FF]"></span>
+                <span class="zibeline-eyes w-2 h-2 mx-0.5 shadow-[0_0_15px_#00D4FF]"></span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Scripts part -->
+    <script src="js/animations.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
