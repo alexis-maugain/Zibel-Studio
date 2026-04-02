@@ -40,8 +40,14 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Serveur prêt: http://localhost:${PORT}`);
-    console.log(`Le site Zibel est actuellement protégé. La clé de l'API est cachée !`);
-});
+const PORT = process.env.PORT || 3000;
+
+// Vercel a besoin qu'on exporte l'app, au lieu de juste faire un app.listen()
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Serveur prêt: http://localhost:${PORT}`);
+        console.log(`Le site Zibel est actuellement protégé. La clé de l'API est cachée !`);
+    });
+}
+
+module.exports = app;
