@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Zibel Studio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="antialiased selection:bg-neonPurple selection:text-white bg-[#08080A] min-h-screen flex flex-col justify-between">
+    
+    <!-- Navbar -->
+    <nav class="w-full z-50 glass-panel border-none rounded-none border-b border-white/10 px-6 py-4 fixed top-0">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
+                <span class="text-white">ZIBEL</span><span class="text-neonPurple">.</span><span class="text-sm font-normal text-gray-400 ml-1">STUDIO</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                &larr; Retour à l'accueil
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-32 relative px-6 mt-16 text-center md:text-left">
+        <div class="absolute inset-0 bg-gradient-to-tr from-neonPurple/10 via-deepBlack to-elecBlue/10 z-[-1]"></div>
+        
+        <div class="bg-blob top-1/4 right-1/4 w-[600px] h-[600px] opacity-30"></div>
+
+        <div class="relative z-10 w-full max-w-2xl glass-panel p-8 md:p-12 rounded-2xl gs-fade">
+            <div class="flex justify-center md:justify-start items-center space-x-2 mb-6">
+                <div class="flex">
+                    <span class="zibeline-eyes w-2 h-2 mx-1"></span>
+                    <span class="zibeline-eyes w-2 h-2 mx-1"></span>
+                </div>
+                <span class="text-sm text-elecBlue font-medium tracking-widest uppercase">Zibeline est à l'écoute</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Créons l'impossible.</h1>
+            <p class="text-gray-400 mb-10 font-light">
+                Discutez de votre projet avec les Zibelins. Nous vous répondrons dans la prochaine dimension.
+            </p>
+            
+            <form action="https://formspree.io/f/mgopnooj" method="POST" class="space-y-6 text-left">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Nom / Agence</label>
+                        <input type="text" name="nom" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonPurple transition-colors" placeholder="Votre nom" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                        <input type="email" name="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonPurple transition-colors" placeholder="vous@exemple.com" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Dimension visée</label>
+                    <div class="relative">
+                        <select name="dimension" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonPurple transition-colors appearance-none">
+                            <option value="vr" class="bg-deepBlack">Événementiel VR</option>
+                            <option value="formation" class="bg-deepBlack">Formation Pro</option>
+                            <option value="tourisme" class="bg-deepBlack">Tourisme 360°</option>
+                            <option value="autre" class="bg-deepBlack">Autre projet numérique</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+                            <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Votre vision</label>
+                    <textarea name="message" rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonPurple transition-colors resize-none" placeholder="Détails de votre idée..." required></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-4 bg-neonPurple text-white rounded-xl font-bold hover:bg-neonPurple/90 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(122,92,255,0.4)] transition-all">
+                    Transmettre le message aux Zibelins
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Partial GSAP for Contact Page (Fade In only) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.from(".gs-fade", { opacity: 0, y: 30, duration: 1, ease: "power3.out", delay: 0.2 });
+    </script>
+</body>
+</html>

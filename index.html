@@ -27,16 +27,16 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 glass-panel border-none rounded-none border-b border-white/10 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter">
+            <a href="#" class="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
                 <span class="text-white">ZIBEL</span><span class="text-neonPurple">.</span><span class="text-sm font-normal text-gray-400 ml-1">STUDIO</span>
-            </div>
+            </a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
                 <a href="#about" class="hover:text-white transition-colors">La Vision</a>
                 <a href="#services" class="hover:text-white transition-colors">Expertises</a>
                 <a href="#portfolio" class="hover:text-white transition-colors">Expériences</a>
                 <a href="#process" class="hover:text-white transition-colors">Méthodologie</a>
             </div>
-            <a href="#contact" class="hidden md:inline-block px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all hover-glow text-sm font-semibold">
+            <a href="contact.html" class="hidden md:inline-block px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all hover-glow text-sm font-semibold">
                 Passer en 4ème dimension
             </a>
         </div>
@@ -74,7 +74,7 @@
                 <a href="#portfolio" class="px-8 py-4 rounded-full bg-neonPurple text-white font-semibold hover-glow transition-all w-full sm:w-auto text-center">
                     Découvrir nos expériences
                 </a>
-                <a href="#contact" class="px-8 py-4 rounded-full glass-panel hover:bg-white/10 transition-all w-full sm:w-auto text-center font-semibold">
+                <a href="contact.html" class="px-8 py-4 rounded-full glass-panel hover:bg-white/10 transition-all w-full sm:w-auto text-center font-semibold">
                     Demander une démo
                 </a>
             </div>
@@ -179,7 +179,7 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Expériences récentes</h2>
                     <p class="text-gray-400">Entrez dans notre univers.</p>
                 </div>
-                <a href="#" class="hidden md:flex items-center space-x-2 text-sm text-neonPurple hover:text-white transition-colors">
+                <a href="#portfolio" id="view-all-btn" class="hidden md:flex items-center space-x-2 text-sm text-neonPurple hover:text-white transition-colors cursor-pointer">
                     <span>Voir tout le portfolio</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
@@ -187,7 +187,7 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade">
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade project-card" data-title="Tesla Model Z - Virtual Drive" data-category="Simulation Auto" data-img="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?auto=format&fit=crop&q=80&w=1000" data-desc="Expérience de conduite immersive en showroom générée sous Unreal Engine 5. Permet aux utilisateurs d'explorer le véhicule sous tous ses angles et de tester différentes configurations en temps réel.">
                     <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
                     <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -197,13 +197,33 @@
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade">
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade project-card" data-title="Louvre 2050 - Visite Immersive" data-category="Événement & Art" data-img="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1000" data-desc="Une redécouverte des œuvres classiques du Louvre dans un environnement futuriste et dystopique. Les utilisateurs peuvent interagir avec les œuvres grâce à des scans 3D haute fidélité.">
                     <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
                     <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
                         <div class="text-neonPurple text-xs font-bold uppercase tracking-wider mb-2">Événement & Art</div>
                         <h3 class="text-2xl font-bold mb-2">Louvre 2050 - Visite Immersive</h3>
                         <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Redécouverte des œuvres classiques en environnements dystopiques.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade hidden portfolio-extra project-card" data-title="Neon City VRC" data-category="Mode Multijoueur" data-img="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=1000" data-desc="Création d'un hub social VR complet avec interactions physiques avancées. Des mini-jeux intégrés permettent aux joueurs de se rencontrer de manière ludique et intuitive.">
+                    <img src="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <div class="text-white text-xs font-bold uppercase tracking-wider mb-2">Mode Multijoueur</div>
+                        <h3 class="text-2xl font-bold mb-2">Neon City VRC</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Hub social VR complet avec interactions physiques avancées.</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel aspect-[4/3] cursor-pointer gs-fade hidden portfolio-extra project-card" data-title="Odyssée Médicale" data-category="Santé & Sécurité" data-img="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000" data-desc="Formation chirurgicale de précision plongeant l'apprenant au cœur de l'anatomie humaine en réalité mixte. Scénarios évolutifs et retours haptiques pour une immersion totale.">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <div class="text-elecBlue text-xs font-bold uppercase tracking-wider mb-2">Santé & Sécurité</div>
+                        <h3 class="text-2xl font-bold mb-2">Odyssée Médicale</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Formation chirurgicale de précision immersive.</p>
                     </div>
                 </div>
             </div>
@@ -264,9 +284,9 @@
         <div class="text-center z-10 gs-fade relative">
             <h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">Passez à la dimension supérieure.</h2>
             <p class="text-xl text-gray-400 mb-12 font-light">Les Zibelins n'attendent plus que vos idées.</p>
-            <button class="px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+            <a href="contact.html" class="inline-block px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
                 Contactez-nous
-            </button>
+            </a>
 
             <!-- Final Mascot appearance -->
             <div class="absolute -right-20 -bottom-20 opacity-50 hidden md:block select-none pointer-events-none">
@@ -284,9 +304,9 @@
     <!-- Footer -->
     <footer class="border-t border-white/10 bg-deepBlack py-12">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-xl font-bold mb-6 md:mb-0">
+            <a href="#" class="text-xl font-bold mb-6 md:mb-0 hover:opacity-80 transition-opacity">
                 <span class="text-white">ZIBEL</span><span class="text-neonPurple">.</span>
-            </div>
+            </a>
             
             <div class="flex space-x-6 text-sm text-gray-500 mb-6 md:mb-0">
                 <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
@@ -356,5 +376,25 @@
     <!-- Scripts part -->
     <script src="js/animations.js"></script>
     <script src="js/chatbot.js"></script>
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-4xl glass-panel rounded-2xl overflow-hidden flex flex-col md:flex-row transform scale-95 transition-transform duration-300" id="project-modal-content">
+            <button id="close-modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 flex items-center justify-center text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="w-full md:w-1/2 h-64 md:h-auto relative">
+                <img id="modal-img" src="" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <div id="modal-category" class="text-neonPurple text-sm font-bold uppercase tracking-wider mb-3"></div>
+                <h3 id="modal-title" class="text-3xl font-bold mb-4 text-white"></h3>
+                <p id="modal-desc" class="text-gray-300 text-base leading-relaxed mb-8"></p>
+                <a href="contact.html" class="inline-block px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-colors self-start text-sm font-semibold">
+                    Lancer un projet similaire
+                </a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
